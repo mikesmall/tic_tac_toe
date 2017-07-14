@@ -29,5 +29,9 @@ document.addEventListener('DOMContentLoaded', function() {
   squareEight.addEventListener('click', clickEvent);
   squareNine.addEventListener('click', clickEvent);
 
+  var clickEvent = function(event) {
+    console.log('You clicked a square');
+  };
+
 // end of 'DOMContentLoaded'
 });
