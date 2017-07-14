@@ -49,5 +49,6 @@ h1 {
 
 span {
   font-weight: bold;
-  font-size: 5em;
+  font-size: 6em;
+  display: none;
 }
