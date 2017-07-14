@@ -27,37 +27,22 @@ h1 {
 }
 
 .game_board {
-  margin: auto;
   width: 500px;
   height: 500px;
-  max-width: 500px;
-  max-height: 500px;
   border: 4px solid black;
+  display: flex;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .one, .two, .three, .four, .five, .six, .seven, .eight, .nine {
-  height: calc(100% / 3);
-  width: calc(100% / 3);
+  flex-grow: 1;
+  width: 100px;
   background-color: pink;
   border: 4px solid black;
   box-sizing: border-box;
-  float: left;
 }
-
-/*.row {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}*/
-
-/*.one, .four, .seven {
-  order: 1;
-}
-
-.two, .five. .eight {
-  order: 2;
-}
-
-.three, .six, .nine {
-  order: 3;
-}*/
