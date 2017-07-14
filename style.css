@@ -13,8 +13,7 @@ button {
 }
 
 div {
-  border: 1px solid black;
-  background-color: gray;
+
 }
 
 .game_board {
@@ -23,12 +22,16 @@ div {
   height:500px;
   max-width: 500px;
   max-height: 500px;
-  display: block;
+  border: 4px solid black;
 }
 
 #top_left, #top_middle, #top_right, #middle_left, #centre, #middle_right, #bottom_left, #bottom_middle, #bottom_right {
   width: 33%;
   height: 33%;
+  background-color: pink;
+  border: 4px solid black;
+  box-sizing: border-box;
+  float: left;
 }
 
 #top_left {
