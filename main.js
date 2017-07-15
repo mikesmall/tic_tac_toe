@@ -28,8 +28,21 @@ document.addEventListener('DOMContentLoaded', function() {
   // Event listeners for each square:
 
   var clickOne = squareOne.addEventListener('click', function() {
-    console.log( this.innerHTML );
-    if (this.innerHTML == '<span class="xo"></span>') {
+    if (this.innerText == '') {
+      this.innerHTML = '<span class="xo">' + whoseTurn + '</span>';
+      if (whoseTurn === 'X') {
+        whoseTurn = 'O'
+      } else if (whoseTurn === 'O') {
+        whoseTurn = 'X'
+      }
+      displayPlayer.innerText = whoseTurn;
+    } else {
+        alert("That square's taken! Pick another one.");
+    };
+  });
+
+  var clickTwo = squareTwo.addEventListener('click', function() {
+    if (this.innerText == '') {
       console.log("yup");
       this.innerHTML = '<span class="xo">' + whoseTurn + '</span>';
       if (whoseTurn === 'X') {
@@ -39,91 +52,114 @@ document.addEventListener('DOMContentLoaded', function() {
       }
       displayPlayer.innerText = whoseTurn;
     } else {
-        alert("That square's been taken! Try another one.");
+        alert("That square's taken! Pick another one.");
     };
   });
 
-  var clickTwo = squareTwo.addEventListener('click', function() {
-    this.innerHTML = '<span class="xo">' + whoseTurn + '</span>';
-    if (whoseTurn === 'X') {
-      whoseTurn = 'O'
-    } else if (whoseTurn === 'O') {
-      whoseTurn = 'X'
-    }
-    displayPlayer.innerText = whoseTurn;
-  });
-
   var clickThree = squareThree.addEventListener('click', function() {
-    this.innerHTML = '<span class="xo">' + whoseTurn + '</span>';
-    if (whoseTurn === 'X') {
-      whoseTurn = 'O'
-    } else if (whoseTurn === 'O') {
-      whoseTurn = 'X'
-    }
-    displayPlayer.innerText = whoseTurn;
+    if (this.innerText == '') {
+      console.log("yup");
+      this.innerHTML = '<span class="xo">' + whoseTurn + '</span>';
+      if (whoseTurn === 'X') {
+        whoseTurn = 'O'
+      } else if (whoseTurn === 'O') {
+        whoseTurn = 'X'
+      }
+      displayPlayer.innerText = whoseTurn;
+    } else {
+        alert("That square's taken! Pick another one.");
+    };
   });
 
   var clickFour = squareFour.addEventListener('click', function() {
-    this.innerHTML = '<span class="xo">' + whoseTurn + '</span>';
-    if (whoseTurn === 'X') {
-      whoseTurn = 'O'
-    } else if (whoseTurn === 'O') {
-      whoseTurn = 'X'
-    }
-    displayPlayer.innerText = whoseTurn;
+    if (this.innerText == '') {
+      console.log("yup");
+      this.innerHTML = '<span class="xo">' + whoseTurn + '</span>';
+      if (whoseTurn === 'X') {
+        whoseTurn = 'O'
+      } else if (whoseTurn === 'O') {
+        whoseTurn = 'X'
+      }
+      displayPlayer.innerText = whoseTurn;
+    } else {
+        alert("That square's taken! Pick another one.");
+    };
   });
 
   var clickFive = squareFive.addEventListener('click', function() {
-    this.innerHTML = '<span class="xo">' + whoseTurn + '</span>';
-    if (whoseTurn === 'X') {
-      whoseTurn = 'O'
-    } else if (whoseTurn === 'O') {
-      whoseTurn = 'X'
-    }
-    displayPlayer.innerText = whoseTurn;
+    if (this.innerText == '') {
+      console.log("yup");
+      this.innerHTML = '<span class="xo">' + whoseTurn + '</span>';
+      if (whoseTurn === 'X') {
+        whoseTurn = 'O'
+      } else if (whoseTurn === 'O') {
+        whoseTurn = 'X'
+      }
+      displayPlayer.innerText = whoseTurn;
+    } else {
+        alert("That square's taken! Pick another one.");
+    };
   });
 
   var clickSix = squareSix.addEventListener('click', function() {
-    this.innerHTML = '<span class="xo">' + whoseTurn + '</span>';
-    if (whoseTurn === 'X') {
-      whoseTurn = 'O'
-    } else if (whoseTurn === 'O') {
-      whoseTurn = 'X'
-    }
-    displayPlayer.innerText = whoseTurn;
+    if (this.innerText == '') {
+      console.log("yup");
+      this.innerHTML = '<span class="xo">' + whoseTurn + '</span>';
+      if (whoseTurn === 'X') {
+        whoseTurn = 'O'
+      } else if (whoseTurn === 'O') {
+        whoseTurn = 'X'
+      }
+      displayPlayer.innerText = whoseTurn;
+    } else {
+        alert("That square's taken! Pick another one.");
+    };
   });
 
   var clickSeven = squareSeven.addEventListener('click', function() {
-    this.innerHTML = '<span class="xo">' + whoseTurn + '</span>';
-    if (whoseTurn === 'X') {
-      whoseTurn = 'O'
-    } else if (whoseTurn === 'O') {
-      whoseTurn = 'X'
-    }
-    displayPlayer.innerText = whoseTurn;
+    if (this.innerText == '') {
+      console.log("yup");
+      this.innerHTML = '<span class="xo">' + whoseTurn + '</span>';
+      if (whoseTurn === 'X') {
+        whoseTurn = 'O'
+      } else if (whoseTurn === 'O') {
+        whoseTurn = 'X'
+      }
+      displayPlayer.innerText = whoseTurn;
+    } else {
+        alert("That square's taken! Pick another one.");
+    };
   });
 
   var clickEight = squareEight.addEventListener('click', function() {
-    this.innerHTML = '<span class="xo">' + whoseTurn + '</span>';
-    if (whoseTurn === 'X') {
-      whoseTurn = 'O'
-    } else if (whoseTurn === 'O') {
-      whoseTurn = 'X'
-    }
-    displayPlayer.innerText = whoseTurn;
+    if (this.innerText == '') {
+      console.log("yup");
+      this.innerHTML = '<span class="xo">' + whoseTurn + '</span>';
+      if (whoseTurn === 'X') {
+        whoseTurn = 'O'
+      } else if (whoseTurn === 'O') {
+        whoseTurn = 'X'
+      }
+      displayPlayer.innerText = whoseTurn;
+    } else {
+        alert("That square's taken! Pick another one.");
+    };
   });
 
   var clickNine = squareNine.addEventListener('click', function() {
-    this.innerHTML = '<span class="xo">' + whoseTurn + '</span>';
-    if (whoseTurn === 'X') {
-      whoseTurn = 'O'
-    } else if (whoseTurn === 'O') {
-      whoseTurn = 'X'
-    }
-    displayPlayer.innerText = whoseTurn;
+    if (this.innerText == '') {
+      console.log("yup");
+      this.innerHTML = '<span class="xo">' + whoseTurn + '</span>';
+      if (whoseTurn === 'X') {
+        whoseTurn = 'O'
+      } else if (whoseTurn === 'O') {
+        whoseTurn = 'X'
+      }
+      displayPlayer.innerText = whoseTurn;
+    } else {
+        alert("That square's taken! Pick another one.");
+    };
   });
-
-
 
 
   //
