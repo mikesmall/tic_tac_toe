@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
   var displayPlayer = document.querySelector('.display_player');
   displayPlayer.innerText = whoseTurn;
 
-  // How to win:
+
   var winningCombos = [
     [1, 2, 3],
     [4, 5, 6],
@@ -38,11 +38,40 @@ document.addEventListener('DOMContentLoaded', function() {
   ];
 
   // What squares do you have?
-  var squaresX = []
-  var squaresO = []
+  var squaresX = [0, 0, 0]
+  var squaresO = [0, 0, 0]
 
   // Did you win?
 
+  function winCheckX(){
+    for(var i=0; i < winningCombos.length; i++){
+      var a, b, c;
+      a = squaresX[ winningCombos[i][0] ];
+      b = squaresX[ winningCombos[i][1] ];
+      c = squaresX[ winningCombos[i][2] ];
+
+      if( a == b && a == c ){
+      // if( a == b && a == c && a != this.empty ){
+        return true;
+      }
+    }
+    return false;
+  };
+
+  function winCheckO(){
+    for(var i=0; i < this.winningCombos.length; i++){
+      var a, b, c;
+      a = this.squaresO[ this.winningCombos[i][0] ];
+      b = this.squaresO[ this.winningCombos[i][1] ];
+      c = this.squaresO[ this.winningCombos[i][2] ];
+
+      if( a == b && a == c ){
+      // if( a == b && a == c && a != this.empty ){
+        return true;
+      }
+    }
+    return false;
+  };
 
   // Display the winner:
   var banner = document.querySelector( 'h1' );
@@ -60,10 +89,21 @@ document.addEventListener('DOMContentLoaded', function() {
       this.style.backgroundColor = 'salmon';
       if (whoseTurn === 'X') {
         squaresX.push(1);
-        whoseTurn = 'O'
+        winCheckX();
+        if (winCheckX() == true) {
+          console.log('winCheckX was true');
+          displayWinner();
+        } else {
+          whoseTurn = 'O'
+        };
       } else if (whoseTurn === 'O') {
         squaresO.push(1);
-        whoseTurn = 'X'
+        winCheckO();
+        if (winCheckO() == true) {
+          displayWinner();
+        } else {
+          whoseTurn = 'X'
+        };
       }
       displayPlayer.innerText = whoseTurn;
     };
