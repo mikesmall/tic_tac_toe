@@ -58,6 +58,7 @@ footer {
 }
 
 span {
+  color: black;
   font-weight: bold;
   font-size: 6em;
   margin: 0 auto;

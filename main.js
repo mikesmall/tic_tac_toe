@@ -56,10 +56,11 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log('Square 9 was clicked');
   });
 
-  // jQuery alternative thing
+  // jQuery to make squares change colour on click:
   $('.square').click(function(){
     console.log('jQuery click alert');
-    $(this).css({"background-color": "salmon" })
+    $(this).css({"background-color": "salmon" });
+    this.innerHTML = '<span class="xo">Hi</span>';
   })
 
 
