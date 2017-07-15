@@ -62,7 +62,6 @@ document.addEventListener('DOMContentLoaded', function() {
       a = squaresO[ winningCombos[i][0] ];
       b = squaresO[ winningCombos[i][1] ];
       c = squaresO[ winningCombos[i][2] ];
-
       if( a == b && a == c ){
         return true;
       }
