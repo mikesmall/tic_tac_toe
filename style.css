@@ -74,4 +74,6 @@ footer {
   font-size: 8em;
   margin: 0 auto;
   position: absolute;
+  width: 100%;
+  text-align: center;
 }
