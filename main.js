@@ -30,6 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
   var clickOne = squareOne.addEventListener('click', function() {
     if (this.innerText == '') {
       this.innerHTML = '<span class="xo">' + whoseTurn + '</span>';
+      this.style.backgroundColor = 'salmon';
       if (whoseTurn === 'X') {
         whoseTurn = 'O'
       } else if (whoseTurn === 'O') {
@@ -43,6 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (this.innerText == '') {
       console.log("yup");
       this.innerHTML = '<span class="xo">' + whoseTurn + '</span>';
+      this.style.backgroundColor = 'salmon';
       if (whoseTurn === 'X') {
         whoseTurn = 'O'
       } else if (whoseTurn === 'O') {
@@ -56,6 +58,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (this.innerText == '') {
       console.log("yup");
       this.innerHTML = '<span class="xo">' + whoseTurn + '</span>';
+      this.style.backgroundColor = 'salmon';
       if (whoseTurn === 'X') {
         whoseTurn = 'O'
       } else if (whoseTurn === 'O') {
@@ -69,6 +72,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (this.innerText == '') {
       console.log("yup");
       this.innerHTML = '<span class="xo">' + whoseTurn + '</span>';
+      this.style.backgroundColor = 'salmon';
       if (whoseTurn === 'X') {
         whoseTurn = 'O'
       } else if (whoseTurn === 'O') {
@@ -82,6 +86,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (this.innerText == '') {
       console.log("yup");
       this.innerHTML = '<span class="xo">' + whoseTurn + '</span>';
+      this.style.backgroundColor = 'salmon';
       if (whoseTurn === 'X') {
         whoseTurn = 'O'
       } else if (whoseTurn === 'O') {
@@ -95,6 +100,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (this.innerText == '') {
       console.log("yup");
       this.innerHTML = '<span class="xo">' + whoseTurn + '</span>';
+      this.style.backgroundColor = 'salmon';
       if (whoseTurn === 'X') {
         whoseTurn = 'O'
       } else if (whoseTurn === 'O') {
@@ -108,6 +114,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (this.innerText == '') {
       console.log("yup");
       this.innerHTML = '<span class="xo">' + whoseTurn + '</span>';
+      this.style.backgroundColor = 'salmon';
       if (whoseTurn === 'X') {
         whoseTurn = 'O'
       } else if (whoseTurn === 'O') {
@@ -121,6 +128,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (this.innerText == '') {
       console.log("yup");
       this.innerHTML = '<span class="xo">' + whoseTurn + '</span>';
+      this.style.backgroundColor = 'salmon';
       if (whoseTurn === 'X') {
         whoseTurn = 'O'
       } else if (whoseTurn === 'O') {
@@ -134,6 +142,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (this.innerText == '') {
       console.log("yup");
       this.innerHTML = '<span class="xo">' + whoseTurn + '</span>';
+      this.style.backgroundColor = 'salmon';
       if (whoseTurn === 'X') {
         whoseTurn = 'O'
       } else if (whoseTurn === 'O') {
