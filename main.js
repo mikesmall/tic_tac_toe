@@ -28,13 +28,19 @@ document.addEventListener('DOMContentLoaded', function() {
   // Event listeners for each square:
 
   var clickOne = squareOne.addEventListener('click', function() {
-    this.innerHTML = '<span class="xo">' + whoseTurn + '</span>';
-    if (whoseTurn === 'X') {
-      whoseTurn = 'O'
-    } else if (whoseTurn === 'O') {
-      whoseTurn = 'X'
-    }
-    displayPlayer.innerText = whoseTurn;
+    console.log( this.innerHTML );
+    if (this.innerHTML == '<span class="xo"></span>') {
+      console.log("yup");
+      this.innerHTML = '<span class="xo">' + whoseTurn + '</span>';
+      if (whoseTurn === 'X') {
+        whoseTurn = 'O'
+      } else if (whoseTurn === 'O') {
+        whoseTurn = 'X'
+      }
+      displayPlayer.innerText = whoseTurn;
+    } else {
+        alert("That square's been taken! Try another one.");
+    };
   });
 
   var clickTwo = squareTwo.addEventListener('click', function() {
