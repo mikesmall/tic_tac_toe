@@ -49,9 +49,7 @@ document.addEventListener('DOMContentLoaded', function() {
       a = squaresX[ winningCombos[i][0] ];
       b = squaresX[ winningCombos[i][1] ];
       c = squaresX[ winningCombos[i][2] ];
-
       if( a == b && a == c ){
-      // if( a == b && a == c && a != this.empty ){
         return true;
       }
     }
@@ -59,14 +57,13 @@ document.addEventListener('DOMContentLoaded', function() {
   };
 
   function winCheckO(){
-    for(var i=0; i < this.winningCombos.length; i++){
+    for(var i=0; i < winningCombos.length; i++){
       var a, b, c;
-      a = this.squaresO[ this.winningCombos[i][0] ];
-      b = this.squaresO[ this.winningCombos[i][1] ];
-      c = this.squaresO[ this.winningCombos[i][2] ];
+      a = squaresO[ winningCombos[i][0] ];
+      b = squaresO[ winningCombos[i][1] ];
+      c = squaresO[ winningCombos[i][2] ];
 
       if( a == b && a == c ){
-      // if( a == b && a == c && a != this.empty ){
         return true;
       }
     }
