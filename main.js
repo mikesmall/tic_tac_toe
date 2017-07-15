@@ -25,18 +25,31 @@ document.addEventListener('DOMContentLoaded', function() {
   var displayPlayer = document.querySelector('.display_player');
   displayPlayer.innerText = whoseTurn;
 
+  // Display the winner:
+  var banner = document.querySelector( 'h1' );
+  var congrats = document.querySelector( 'p' );
+
+  function displayWinner() {
+    banner.innerText = whoseTurn + ' is the winner!';
+    congrats.innerText = 'Nice job, ' + whoseTurn + '!';
+  };
+
   // Event listeners for each square:
 
   var clickOne = squareOne.addEventListener('click', function() {
     if (this.innerText == '') {
       this.innerHTML = '<span class="xo">' + whoseTurn + '</span>';
       this.style.backgroundColor = 'salmon';
+
+      
+
       if (whoseTurn === 'X') {
         whoseTurn = 'O'
       } else if (whoseTurn === 'O') {
         whoseTurn = 'X'
       }
       displayPlayer.innerText = whoseTurn;
+      displayWinner();
     };
   });
 
