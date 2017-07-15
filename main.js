@@ -56,11 +56,10 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log('Square 9 was clicked');
   });
 
-  // jQuery alternative
-  
+  // jQuery alternative thing
   $('.square').click(function(){
     console.log('jQuery click alert');
-    $(this).siblings()
+    $(this).css({"background-color": "salmon" })
   })
 
 
