@@ -36,8 +36,6 @@ document.addEventListener('DOMContentLoaded', function() {
         whoseTurn = 'X'
       }
       displayPlayer.innerText = whoseTurn;
-    } else {
-        alert("That square's taken! Pick another one.");
     };
   });
 
@@ -51,8 +49,6 @@ document.addEventListener('DOMContentLoaded', function() {
         whoseTurn = 'X'
       }
       displayPlayer.innerText = whoseTurn;
-    } else {
-        alert("That square's taken! Pick another one.");
     };
   });
 
@@ -66,8 +62,6 @@ document.addEventListener('DOMContentLoaded', function() {
         whoseTurn = 'X'
       }
       displayPlayer.innerText = whoseTurn;
-    } else {
-        alert("That square's taken! Pick another one.");
     };
   });
 
@@ -81,8 +75,6 @@ document.addEventListener('DOMContentLoaded', function() {
         whoseTurn = 'X'
       }
       displayPlayer.innerText = whoseTurn;
-    } else {
-        alert("That square's taken! Pick another one.");
     };
   });
 
@@ -96,8 +88,6 @@ document.addEventListener('DOMContentLoaded', function() {
         whoseTurn = 'X'
       }
       displayPlayer.innerText = whoseTurn;
-    } else {
-        alert("That square's taken! Pick another one.");
     };
   });
 
@@ -111,8 +101,6 @@ document.addEventListener('DOMContentLoaded', function() {
         whoseTurn = 'X'
       }
       displayPlayer.innerText = whoseTurn;
-    } else {
-        alert("That square's taken! Pick another one.");
     };
   });
 
@@ -126,8 +114,6 @@ document.addEventListener('DOMContentLoaded', function() {
         whoseTurn = 'X'
       }
       displayPlayer.innerText = whoseTurn;
-    } else {
-        alert("That square's taken! Pick another one.");
     };
   });
 
@@ -141,8 +127,6 @@ document.addEventListener('DOMContentLoaded', function() {
         whoseTurn = 'X'
       }
       displayPlayer.innerText = whoseTurn;
-    } else {
-        alert("That square's taken! Pick another one.");
     };
   });
 
@@ -156,8 +140,6 @@ document.addEventListener('DOMContentLoaded', function() {
         whoseTurn = 'X'
       }
       displayPlayer.innerText = whoseTurn;
-    } else {
-        alert("That square's taken! Pick another one.");
     };
   });
 
