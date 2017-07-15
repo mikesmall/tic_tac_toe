@@ -18,6 +18,14 @@ document.addEventListener('DOMContentLoaded', function() {
   var squareEight = document.querySelector('.eight');
   var squareNine = document.querySelector('.nine');
 
+  // Player X goes first!
+  var whoseTurn = 'X';
+
+  // Show whose turn it is:
+  var displayPlayer = document.querySelector('.display_player');
+  displayPlayer.innerText = whoseTurn;
+
+  // How to win:
   var winningCombos = [
     [1, 2, 3],
     [4, 5, 6],
@@ -29,18 +37,16 @@ document.addEventListener('DOMContentLoaded', function() {
     [3, 5, 7]
   ];
 
+  // What squares do you have?
+  var squaresX = []
+  var squaresO = []
 
-  // Player X goes first!
-  var whoseTurn = 'X';
+  // Did you win?
 
-  // Show whose turn it is:
-  var displayPlayer = document.querySelector('.display_player');
-  displayPlayer.innerText = whoseTurn;
 
   // Display the winner:
   var banner = document.querySelector( 'h1' );
   var congrats = document.querySelector( 'p' );
-
   function displayWinner() {
     banner.innerText = whoseTurn + ' is the winner!';
     congrats.innerText = 'Nice job, ' + whoseTurn + '!';
@@ -52,16 +58,14 @@ document.addEventListener('DOMContentLoaded', function() {
     if (this.innerText == '') {
       this.innerHTML = '<span class="xo">' + whoseTurn + '</span>';
       this.style.backgroundColor = 'salmon';
-
-
-
       if (whoseTurn === 'X') {
+        squaresX.push(1);
         whoseTurn = 'O'
       } else if (whoseTurn === 'O') {
+        squaresO.push(1);
         whoseTurn = 'X'
       }
       displayPlayer.innerText = whoseTurn;
-      displayWinner();
     };
   });
 
@@ -71,8 +75,10 @@ document.addEventListener('DOMContentLoaded', function() {
       this.innerHTML = '<span class="xo">' + whoseTurn + '</span>';
       this.style.backgroundColor = 'salmon';
       if (whoseTurn === 'X') {
+        squaresX.push(2);
         whoseTurn = 'O'
       } else if (whoseTurn === 'O') {
+        squaresO.push(2);
         whoseTurn = 'X'
       }
       displayPlayer.innerText = whoseTurn;
@@ -85,8 +91,10 @@ document.addEventListener('DOMContentLoaded', function() {
       this.innerHTML = '<span class="xo">' + whoseTurn + '</span>';
       this.style.backgroundColor = 'salmon';
       if (whoseTurn === 'X') {
+        squaresX.push(3);
         whoseTurn = 'O'
       } else if (whoseTurn === 'O') {
+        squaresO.push(3);
         whoseTurn = 'X'
       }
       displayPlayer.innerText = whoseTurn;
@@ -99,8 +107,10 @@ document.addEventListener('DOMContentLoaded', function() {
       this.innerHTML = '<span class="xo">' + whoseTurn + '</span>';
       this.style.backgroundColor = 'salmon';
       if (whoseTurn === 'X') {
+        squaresX.push(4);
         whoseTurn = 'O'
       } else if (whoseTurn === 'O') {
+        squaresO.push(4);
         whoseTurn = 'X'
       }
       displayPlayer.innerText = whoseTurn;
@@ -113,8 +123,10 @@ document.addEventListener('DOMContentLoaded', function() {
       this.innerHTML = '<span class="xo">' + whoseTurn + '</span>';
       this.style.backgroundColor = 'salmon';
       if (whoseTurn === 'X') {
+        squaresX.push(5);
         whoseTurn = 'O'
       } else if (whoseTurn === 'O') {
+        squaresO.push(5);
         whoseTurn = 'X'
       }
       displayPlayer.innerText = whoseTurn;
@@ -127,8 +139,10 @@ document.addEventListener('DOMContentLoaded', function() {
       this.innerHTML = '<span class="xo">' + whoseTurn + '</span>';
       this.style.backgroundColor = 'salmon';
       if (whoseTurn === 'X') {
+        squaresX.push(6);
         whoseTurn = 'O'
       } else if (whoseTurn === 'O') {
+        squaresO.push(6);
         whoseTurn = 'X'
       }
       displayPlayer.innerText = whoseTurn;
@@ -141,8 +155,10 @@ document.addEventListener('DOMContentLoaded', function() {
       this.innerHTML = '<span class="xo">' + whoseTurn + '</span>';
       this.style.backgroundColor = 'salmon';
       if (whoseTurn === 'X') {
+        squaresX.push(7);
         whoseTurn = 'O'
       } else if (whoseTurn === 'O') {
+        squaresO.push(7);
         whoseTurn = 'X'
       }
       displayPlayer.innerText = whoseTurn;
@@ -155,8 +171,10 @@ document.addEventListener('DOMContentLoaded', function() {
       this.innerHTML = '<span class="xo">' + whoseTurn + '</span>';
       this.style.backgroundColor = 'salmon';
       if (whoseTurn === 'X') {
+        squaresX.push(8);
         whoseTurn = 'O'
       } else if (whoseTurn === 'O') {
+        squaresO.push(8);
         whoseTurn = 'X'
       }
       displayPlayer.innerText = whoseTurn;
@@ -169,8 +187,10 @@ document.addEventListener('DOMContentLoaded', function() {
       this.innerHTML = '<span class="xo">' + whoseTurn + '</span>';
       this.style.backgroundColor = 'salmon';
       if (whoseTurn === 'X') {
+        squaresX.push(9);
         whoseTurn = 'O'
       } else if (whoseTurn === 'O') {
+        squaresO.push(9);
         whoseTurn = 'X'
       }
       displayPlayer.innerText = whoseTurn;
