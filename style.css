@@ -10,6 +10,17 @@ h1 {
   font-size: 4em;
 }
 
+.whose_turn {
+  margin: 10px auto;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.current_player {
+
+}
+
 footer {
   margin: 16px auto;
   color: steelblue;
@@ -57,7 +68,7 @@ footer {
   position: relative;
 }
 
-span {
+.xo {
   color: black;
   font-weight: bold;
   font-size: 6em;
