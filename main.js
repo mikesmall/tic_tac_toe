@@ -28,93 +28,93 @@ document.addEventListener('DOMContentLoaded', function() {
   // Event listeners for each square:
 
   var clickOne = squareOne.addEventListener('click', function() {
-    console.log('Square 1 was clicked');
     this.innerHTML = '<span class="xo">' + whoseTurn + '</span>';
     if (whoseTurn === 'X') {
       whoseTurn = 'O'
     } else if (whoseTurn === 'O') {
       whoseTurn = 'X'
     }
+    displayPlayer.innerText = whoseTurn;
   });
 
   var clickTwo = squareTwo.addEventListener('click', function() {
-    console.log('Square 2 was clicked');
     this.innerHTML = '<span class="xo">' + whoseTurn + '</span>';
     if (whoseTurn === 'X') {
       whoseTurn = 'O'
     } else if (whoseTurn === 'O') {
       whoseTurn = 'X'
     }
+    displayPlayer.innerText = whoseTurn;
   });
 
   var clickThree = squareThree.addEventListener('click', function() {
-    console.log('Square 3 was clicked');
     this.innerHTML = '<span class="xo">' + whoseTurn + '</span>';
     if (whoseTurn === 'X') {
       whoseTurn = 'O'
     } else if (whoseTurn === 'O') {
       whoseTurn = 'X'
     }
+    displayPlayer.innerText = whoseTurn;
   });
 
   var clickFour = squareFour.addEventListener('click', function() {
-    console.log('Square 4 was clicked');
     this.innerHTML = '<span class="xo">' + whoseTurn + '</span>';
     if (whoseTurn === 'X') {
       whoseTurn = 'O'
     } else if (whoseTurn === 'O') {
       whoseTurn = 'X'
     }
+    displayPlayer.innerText = whoseTurn;
   });
 
   var clickFive = squareFive.addEventListener('click', function() {
-    console.log('Square 5 was clicked');
     this.innerHTML = '<span class="xo">' + whoseTurn + '</span>';
     if (whoseTurn === 'X') {
       whoseTurn = 'O'
     } else if (whoseTurn === 'O') {
       whoseTurn = 'X'
     }
+    displayPlayer.innerText = whoseTurn;
   });
 
   var clickSix = squareSix.addEventListener('click', function() {
-    console.log('Square 6 was clicked');
     this.innerHTML = '<span class="xo">' + whoseTurn + '</span>';
     if (whoseTurn === 'X') {
       whoseTurn = 'O'
     } else if (whoseTurn === 'O') {
       whoseTurn = 'X'
     }
+    displayPlayer.innerText = whoseTurn;
   });
 
   var clickSeven = squareSeven.addEventListener('click', function() {
-    console.log('Square 7 was clicked');
     this.innerHTML = '<span class="xo">' + whoseTurn + '</span>';
     if (whoseTurn === 'X') {
       whoseTurn = 'O'
     } else if (whoseTurn === 'O') {
       whoseTurn = 'X'
     }
+    displayPlayer.innerText = whoseTurn;
   });
 
   var clickEight = squareEight.addEventListener('click', function() {
-    console.log('Square 8 was clicked');
     this.innerHTML = '<span class="xo">' + whoseTurn + '</span>';
     if (whoseTurn === 'X') {
       whoseTurn = 'O'
     } else if (whoseTurn === 'O') {
       whoseTurn = 'X'
     }
+    displayPlayer.innerText = whoseTurn;
   });
 
   var clickNine = squareNine.addEventListener('click', function() {
-    console.log('Square 9 was clicked');
     this.innerHTML = '<span class="xo">' + whoseTurn + '</span>';
     if (whoseTurn === 'X') {
       whoseTurn = 'O'
     } else if (whoseTurn === 'O') {
       whoseTurn = 'X'
     }
+    displayPlayer.innerText = whoseTurn;
   });
 
 
