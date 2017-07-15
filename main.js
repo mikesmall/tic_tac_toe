@@ -19,19 +19,41 @@ document.addEventListener('DOMContentLoaded', function() {
   var squareNine = document.querySelector('.nine');
 
   // Event listeners for each square:
-  squareOne.addEventListener('click', clickEvent);
-  squareTwo.addEventListener('click', clickEvent);
-  squareThree.addEventListener('click', clickEvent);
-  squareFour.addEventListener('click', clickEvent);
-  squareFive.addEventListener('click', clickEvent);
-  squareSix.addEventListener('click', clickEvent);
-  squareSeven.addEventListener('click', clickEvent);
-  squareEight.addEventListener('click', clickEvent);
-  squareNine.addEventListener('click', clickEvent);
+  var clickOne = squareOne.addEventListener('click', function() {
+    console.log('Square 1 was clicked');
+  });
 
-  var clickEvent = function(event) {
-    console.log('You clicked a square');
-  };
+  var clickTwo = squareTwo.addEventListener('click', function() {
+    console.log('Square 2 was clicked');
+  });
+
+  var clickThree = squareThree.addEventListener('click', function() {
+    console.log('Square 3 was clicked');
+  });
+
+  var clickFour = squareFour.addEventListener('click', function() {
+    console.log('Square 4 was clicked');
+  });
+
+  var clickFive = squareFive.addEventListener('click', function() {
+    console.log('Square 5 was clicked');
+  });
+
+  var clickSix = squareSix.addEventListener('click', function() {
+    console.log('Square 6 was clicked');
+  });
+
+  var clickSeven = squareSeven.addEventListener('click', function() {
+    console.log('Square 7 was clicked');
+  });
+
+  var clickEight = squareEight.addEventListener('click', function() {
+    console.log('Square 8 was clicked');
+  });
+
+  var clickNine = squareNine.addEventListener('click', function() {
+    console.log('Square 9 was clicked');
+  });
 
 // end of 'DOMContentLoaded'
 });
