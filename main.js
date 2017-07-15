@@ -18,6 +18,17 @@ document.addEventListener('DOMContentLoaded', function() {
   var squareEight = document.querySelector('.eight');
   var squareNine = document.querySelector('.nine');
 
+  // List of winning square-combinations::
+  // 1, 2, 3
+  // 4, 5, 6
+  // 7, 8, 9
+  // 1, 4, 7
+  // 2, 5, 8
+  // 3, 6, 9
+  // 1, 5, 9
+  // 3, 5, 7
+
+
   // Player X goes first!
   var whoseTurn = 'X';
 
@@ -41,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function() {
       this.innerHTML = '<span class="xo">' + whoseTurn + '</span>';
       this.style.backgroundColor = 'salmon';
 
-      
+
 
       if (whoseTurn === 'X') {
         whoseTurn = 'O'
