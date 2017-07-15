@@ -10,6 +10,14 @@ h1 {
   font-size: 4em;
 }
 
+footer {
+  margin: 16px auto;
+  color: steelblue;
+  text-align: center;
+  margin-top: 80px;
+  padding: 10px;
+}
+
 /* Button: */
 .new_game {
   text-align:center;

@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
   var squareNine = document.querySelector('.nine');
 
   // Event listeners for each square:
+
   var clickOne = squareOne.addEventListener('click', function() {
     console.log('Square 1 was clicked');
   });
@@ -54,6 +55,14 @@ document.addEventListener('DOMContentLoaded', function() {
   var clickNine = squareNine.addEventListener('click', function() {
     console.log('Square 9 was clicked');
   });
+
+  // jQuery alternative
+  
+  $('.square').click(function(){
+    console.log('jQuery click alert');
+    $(this).siblings()
+  })
+
 
 // end of 'DOMContentLoaded'
 });
