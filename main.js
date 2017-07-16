@@ -18,14 +18,14 @@ document.addEventListener('DOMContentLoaded', function() {
   var squareEight = document.querySelector('.eight');
   var squareNine = document.querySelector('.nine');
 
-  // Player X goes first!
+  // 'X' goes first:
   var whoseTurn = 'X';
 
   // Show whose turn it is:
   var displayPlayer = document.querySelector('.display_player');
   displayPlayer.innerText = whoseTurn;
 
-  // What combos win:
+  // How to win:
   var winningCombos = [
     [1, 2, 3],
     [4, 5, 6],
@@ -37,12 +37,11 @@ document.addEventListener('DOMContentLoaded', function() {
     [3, 5, 7]
   ];
 
-  // What squares do you have?
-  var squaresX = [0, 0, 0]
-  var squaresO = [0, 0, 0]
+  // Which squares each player has:
+  var squaresX = [0, 0, 0, 0, 0, 0, 0]
+  var squaresO = [0, 0, 0, 0, 0, 0, 0]
 
-  // Did you win?
-
+  // Did 'X' just win?
   function winCheckX(){
     for(var i=0; i < winningCombos.length; i++){
       var a, b, c;
@@ -56,6 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
     return false;
   };
 
+  // Did 'O' just win?
   function winCheckO(){
     for(var i=0; i < winningCombos.length; i++){
       var a, b, c;
@@ -106,7 +106,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
   var clickTwo = squareTwo.addEventListener('click', function() {
     if (this.innerText == '') {
-      console.log("yup");
       this.innerHTML = '<span class="xo">' + whoseTurn + '</span>';
       this.style.backgroundColor = 'salmon';
       if (whoseTurn === 'X') {
@@ -132,7 +131,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
   var clickThree = squareThree.addEventListener('click', function() {
     if (this.innerText == '') {
-      console.log("yup");
       this.innerHTML = '<span class="xo">' + whoseTurn + '</span>';
       this.style.backgroundColor = 'salmon';
       if (whoseTurn === 'X') {
@@ -158,7 +156,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
   var clickFour = squareFour.addEventListener('click', function() {
     if (this.innerText == '') {
-      console.log("yup");
       this.innerHTML = '<span class="xo">' + whoseTurn + '</span>';
       this.style.backgroundColor = 'salmon';
       if (whoseTurn === 'X') {
@@ -184,7 +181,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
   var clickFive = squareFive.addEventListener('click', function() {
     if (this.innerText == '') {
-      console.log("yup");
       this.innerHTML = '<span class="xo">' + whoseTurn + '</span>';
       this.style.backgroundColor = 'salmon';
       if (whoseTurn === 'X') {
@@ -211,7 +207,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
   var clickSix = squareSix.addEventListener('click', function() {
     if (this.innerText == '') {
-      console.log("yup");
       this.innerHTML = '<span class="xo">' + whoseTurn + '</span>';
       this.style.backgroundColor = 'salmon';
       if (whoseTurn === 'X') {
@@ -237,7 +232,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
   var clickSeven = squareSeven.addEventListener('click', function() {
     if (this.innerText == '') {
-      console.log("yup");
       this.innerHTML = '<span class="xo">' + whoseTurn + '</span>';
       this.style.backgroundColor = 'salmon';
       if (whoseTurn === 'X') {
@@ -263,7 +257,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
   var clickEight = squareEight.addEventListener('click', function() {
     if (this.innerText == '') {
-      console.log("yup");
       this.innerHTML = '<span class="xo">' + whoseTurn + '</span>';
       this.style.backgroundColor = 'salmon';
       if (whoseTurn === 'X') {
@@ -289,7 +282,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
   var clickNine = squareNine.addEventListener('click', function() {
     if (this.innerText == '') {
-      console.log("yup");
       this.innerHTML = '<span class="xo">' + whoseTurn + '</span>';
       this.style.backgroundColor = 'salmon';
       if (whoseTurn === 'X') {
