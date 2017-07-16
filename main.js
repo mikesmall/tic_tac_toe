@@ -41,28 +41,14 @@ document.addEventListener('DOMContentLoaded', function() {
   var squaresX = [0, 0, 0, 0, 0, 0, 0, 0, 0]
   var squaresO = [0, 0, 0, 0, 0, 0, 0, 0, 0]
 
-  // Did 'X' just win?
-  function winCheckX(){
+  // Did you just win?
+  function winCheck(squaresArray){
     for(var i=0; i < winningCombos.length; i++){
       var a, b, c;
-      a = squaresX[ winningCombos[i][0] ];
-      b = squaresX[ winningCombos[i][1] ];
-      c = squaresX[ winningCombos[i][2] ];
-      if( a == b && a == c ){
-        return true;
-      }
-    }
-    return false;
-  };
-
-  // Did 'O' just win?
-  function winCheckO(){
-    for(var i=0; i < winningCombos.length; i++){
-      var a, b, c;
-      a = squaresO[ winningCombos[i][0] ];
-      b = squaresO[ winningCombos[i][1] ];
-      c = squaresO[ winningCombos[i][2] ];
-      if( a == b && a == c ){
+      a = squaresArray[ winningCombos[i][0] ];
+      b = squaresArray[ winningCombos[i][1] ];
+      c = squaresArray[ winningCombos[i][2] ];
+      if( a == b && a == c && a != 0){
         return true;
       }
     }
@@ -85,16 +71,14 @@ document.addEventListener('DOMContentLoaded', function() {
       this.style.backgroundColor = 'salmon';
       if (whoseTurn === 'X') {
         squaresX.push(1);
-        winCheckX();
-        if (winCheckX() == true) {
+        if (winCheck(squaresX) == true) {
           displayWinner();
         } else {
           whoseTurn = 'O'
         };
       } else if (whoseTurn === 'O') {
         squaresO.push(1);
-        winCheckO();
-        if (winCheckO() == true) {
+        if (winCheck(squaresO) == true) {
           displayWinner();
         } else {
           whoseTurn = 'X'
@@ -110,16 +94,14 @@ document.addEventListener('DOMContentLoaded', function() {
       this.style.backgroundColor = 'salmon';
       if (whoseTurn === 'X') {
         squaresX.push(2);
-        winCheckX();
-        if (winCheckX() == true) {
+        if (winCheck(squaresX) == true) {
           displayWinner();
         } else {
           whoseTurn = 'O'
         };
       } else if (whoseTurn === 'O') {
         squaresO.push(2);
-        winCheckO();
-        if (winCheckO() == true) {
+        if (winCheck(squaresO) == true) {
           displayWinner();
         } else {
           whoseTurn = 'X'
@@ -135,16 +117,14 @@ document.addEventListener('DOMContentLoaded', function() {
       this.style.backgroundColor = 'salmon';
       if (whoseTurn === 'X') {
         squaresX.push(3);
-        winCheckX();
-        if (winCheckX() == true) {
+        if (winCheck(squaresX) == true) {
           displayWinner();
         } else {
           whoseTurn = 'O'
         };
       } else if (whoseTurn === 'O') {
         squaresO.push(3);
-        winCheckO();
-        if (winCheckO() == true) {
+        if (winCheck(squaresO) == true) {
           displayWinner();
         } else {
           whoseTurn = 'X'
@@ -160,16 +140,14 @@ document.addEventListener('DOMContentLoaded', function() {
       this.style.backgroundColor = 'salmon';
       if (whoseTurn === 'X') {
         squaresX.push(4);
-        winCheckX();
-        if (winCheckX() == true) {
+        if (winCheck(squaresX) == true) {
           displayWinner();
         } else {
           whoseTurn = 'O'
         };
       } else if (whoseTurn === 'O') {
         squaresO.push(4);
-        winCheckO();
-        if (winCheckO() == true) {
+        if (winCheck(squaresO) == true) {
           displayWinner();
         } else {
           whoseTurn = 'X'
@@ -185,16 +163,14 @@ document.addEventListener('DOMContentLoaded', function() {
       this.style.backgroundColor = 'salmon';
       if (whoseTurn === 'X') {
         squaresX.push(5);
-        winCheckX();
-        if (winCheckX() == true) {
+        if (winCheck(squaresX) == true) {
           displayWinner();
         } else {
           whoseTurn = 'O'
         };
       } else if (whoseTurn === 'O') {
         squaresO.push(5);
-        winCheckO();
-        if (winCheckO() == true) {
+        if (winCheck(squaresO) == true) {
           displayWinner();
         } else {
           whoseTurn = 'X'
@@ -211,16 +187,14 @@ document.addEventListener('DOMContentLoaded', function() {
       this.style.backgroundColor = 'salmon';
       if (whoseTurn === 'X') {
         squaresX.push(6);
-        winCheckX();
-        if (winCheckX() == true) {
+        if (winCheck(squaresX) == true) {
           displayWinner();
         } else {
           whoseTurn = 'O'
         };
       } else if (whoseTurn === 'O') {
         squaresO.push(6);
-        winCheckO();
-        if (winCheckO() == true) {
+        if (winCheck(squaresO) == true) {
           displayWinner();
         } else {
           whoseTurn = 'X'
@@ -236,16 +210,14 @@ document.addEventListener('DOMContentLoaded', function() {
       this.style.backgroundColor = 'salmon';
       if (whoseTurn === 'X') {
         squaresX.push(7);
-        winCheckX();
-        if (winCheckX() == true) {
+        if (winCheck(squaresX) == true) {
           displayWinner();
         } else {
           whoseTurn = 'O'
         };
       } else if (whoseTurn === 'O') {
         squaresO.push(7);
-        winCheckO();
-        if (winCheckO() == true) {
+        if (winCheck(squaresO) == true) {
           displayWinner();
         } else {
           whoseTurn = 'X'
@@ -261,16 +233,14 @@ document.addEventListener('DOMContentLoaded', function() {
       this.style.backgroundColor = 'salmon';
       if (whoseTurn === 'X') {
         squaresX.push(8);
-        winCheckX();
-        if (winCheckX() == true) {
+        if (winCheck(squaresX) == true) {
           displayWinner();
         } else {
           whoseTurn = 'O'
         };
       } else if (whoseTurn === 'O') {
         squaresO.push(8);
-        winCheckO();
-        if (winCheckO() == true) {
+        if (winCheck(squaresO) == true) {
           displayWinner();
         } else {
           whoseTurn = 'X'
@@ -286,16 +256,14 @@ document.addEventListener('DOMContentLoaded', function() {
       this.style.backgroundColor = 'salmon';
       if (whoseTurn === 'X') {
         squaresX.push(9);
-        winCheckX();
-        if (winCheckX() == true) {
+        if (winCheck(squaresX) == true) {
           displayWinner();
         } else {
           whoseTurn = 'O'
         };
       } else if (whoseTurn === 'O') {
         squaresO.push(9);
-        winCheckO();
-        if (winCheckO() == true) {
+        if (winCheck(squaresO) == true) {
           displayWinner();
         } else {
           whoseTurn = 'X'
