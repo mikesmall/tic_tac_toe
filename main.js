@@ -53,14 +53,28 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Did you just win?
   function winCheck(squaresArray) {
-    if (squaresArray.includes(1) && squaresArray.includes(2) && squaresArray.includes(3))
-    || (squaresArray.includes(4) && squaresArray.includes(5) && squaresArray.includes(6))
-    || (squaresArray.includes(7) && squaresArray.includes(8) && squaresArray.includes(9))
-    || (squaresArray.includes(1) && squaresArray.includes(4) && squaresArray.includes(7))
-    || (squaresArray.includes(2) && squaresArray.includes(5) && squaresArray.includes(8))
-    || (squaresArray.includes(3) && squaresArray.includes(6) && squaresArray.includes(9))
-    || (squaresArray.includes(1) && squaresArray.includes(5) && squaresArray.includes(9))
-    || (squaresArray.includes(3) && squaresArray.includes(5) && squaresArray.includes(7))
+    if (squaresArray.includes(1) && squaresArray.includes(2) && squaresArray.includes(3)) {
+      displayWinner();
+    }
+    else if (squaresArray.includes(4) && squaresArray.includes(5) && squaresArray.includes(6)) {
+      displayWinner();
+    }
+    else if (squaresArray.includes(7) && squaresArray.includes(8) && squaresArray.includes(9)) {
+      displayWinner();
+    }
+    else if (squaresArray.includes(1) && squaresArray.includes(4) && squaresArray.includes(7)) {
+      displayWinner();
+    }
+    else if (squaresArray.includes(2) && squaresArray.includes(5) && squaresArray.includes(8)) {
+      displayWinner();
+    }
+    else if (squaresArray.includes(3) && squaresArray.includes(6) && squaresArray.includes(9)) {
+      displayWinner();
+    }
+    else if (squaresArray.includes(1) && squaresArray.includes(5) && squaresArray.includes(9)) {
+      displayWinner();
+    }
+    else if (squaresArray.includes(3) && squaresArray.includes(5) && squaresArray.includes(7))
     {
       displayWinner();
     }
