@@ -34,17 +34,18 @@ document.addEventListener('DOMContentLoaded', function() {
   var displayPlayer = document.querySelector('.display_player');
   displayPlayer.innerText = whoseTurn;
 
+  // Turns out I don't need this. Keeping for stupid posterity:
   // How to win:
-  var winningCombos = [
-    [1, 2, 3],
-    [4, 5, 6],
-    [7, 8, 9],
-    [1, 4, 7],
-    [2, 5, 8],
-    [3, 6, 9],
-    [1, 5, 9],
-    [3, 5, 7]
-  ];
+  // var winningCombos = [
+  //   [1, 2, 3],
+  //   [4, 5, 6],
+  //   [7, 8, 9],
+  //   [1, 4, 7],
+  //   [2, 5, 8],
+  //   [3, 6, 9],
+  //   [1, 5, 9],
+  //   [3, 5, 7]
+  // ];
 
   // Which squares each player has:
   var squaresX = [0, 0, 0, 0, 0, 0, 0, 0, 0]
@@ -52,21 +53,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Did you just win?
   function winCheck(squaresArray) {
-
+    if (squaresArray.includes(1) && squaresArray.includes(2) && squaresArray.includes(3))
+    || (squaresArray.includes(4) && squaresArray.includes(5) && squaresArray.includes(6))
+    || (squaresArray.includes(7) && squaresArray.includes(8) && squaresArray.includes(9))
+    || (squaresArray.includes(1) && squaresArray.includes(4) && squaresArray.includes(7))
+    || (squaresArray.includes(2) && squaresArray.includes(5) && squaresArray.includes(8))
+    || (squaresArray.includes(3) && squaresArray.includes(6) && squaresArray.includes(9))
+    || (squaresArray.includes(1) && squaresArray.includes(5) && squaresArray.includes(9))
+    || (squaresArray.includes(3) && squaresArray.includes(5) && squaresArray.includes(7))
+    {
+      displayWinner();
+    }
   };
-
-  // function winCheck(squaresArray){
-  //   var win = false;
-    // for(var i=0; i < winningCombos.length; i++){
-    //   var a, b, c;
-    //   a = squaresArray[ winningCombos[i][0] ];
-    //   b = squaresArray[ winningCombos[i][1] ];
-    //   c = squaresArray[ winningCombos[i][2] ];
-    //   if( a == b && a == c && a != 0){
-    //     win = true;
-    //   }
-    // }
-    // };
 
   // Display the winner:
   var banner = document.querySelector( 'h1' );
