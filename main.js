@@ -7,6 +7,15 @@ document.addEventListener('DOMContentLoaded', function() {
     location.reload();
   });
 
+  //  Square IDs:
+  //  -------------
+  //	| 1 | 4 | 7 |
+  //  |---|---|---|
+  //  | 2 | 5 | 7 |
+  //	|---|---|---|
+  //	| 3 | 6 | 9 |
+  //  -------------
+
   // Variables to represent each square:
   var squareOne = document.querySelector('.one');
   var squareTwo = document.querySelector('.two');
@@ -42,18 +51,22 @@ document.addEventListener('DOMContentLoaded', function() {
   var squaresO = [0, 0, 0, 0, 0, 0, 0, 0, 0]
 
   // Did you just win?
-  function winCheck(squaresArray){
-    for(var i=0; i < winningCombos.length; i++){
-      var a, b, c;
-      a = squaresArray[ winningCombos[i][0] ];
-      b = squaresArray[ winningCombos[i][1] ];
-      c = squaresArray[ winningCombos[i][2] ];
-      if( a == b && a == c && a != 0){
-        return true;
-      }
-    }
-    return false;
+  function winCheck(squaresArray) {
+
   };
+
+  // function winCheck(squaresArray){
+  //   var win = false;
+    // for(var i=0; i < winningCombos.length; i++){
+    //   var a, b, c;
+    //   a = squaresArray[ winningCombos[i][0] ];
+    //   b = squaresArray[ winningCombos[i][1] ];
+    //   c = squaresArray[ winningCombos[i][2] ];
+    //   if( a == b && a == c && a != 0){
+    //     win = true;
+    //   }
+    // }
+    // };
 
   // Display the winner:
   var banner = document.querySelector( 'h1' );
