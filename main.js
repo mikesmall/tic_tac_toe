@@ -38,8 +38,8 @@ document.addEventListener('DOMContentLoaded', function() {
   ];
 
   // Which squares each player has:
-  var squaresX = [0, 0, 0, 0, 0, 0, 0]
-  var squaresO = [0, 0, 0, 0, 0, 0, 0]
+  var squaresX = [0, 0, 0, 0, 0, 0, 0, 0, 0]
+  var squaresO = [0, 0, 0, 0, 0, 0, 0, 0, 0]
 
   // Did 'X' just win?
   function winCheckX(){
