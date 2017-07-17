@@ -75,12 +75,17 @@ document.addEventListener('DOMContentLoaded', function() {
     congrats.innerText = 'Nice job, ' + whoseTurn + '!';
   };
 
+  // Populate square:
+  function populate(square) {
+    square.innerHTML = '<span class="xo">' + whoseTurn + '</span>';
+    square.style.backgroundColor = 'salmon';
+  };
+
   // Event listeners for each square:
 
   var clickOne = squareOne.addEventListener('click', function() {
     if (this.innerText == '') {
-      this.innerHTML = '<span class="xo">' + whoseTurn + '</span>';
-      this.style.backgroundColor = 'salmon';
+      populate(this)
       if (whoseTurn === 'X') {
         squaresX.push(1);
         if (winCheck(squaresX) == true) {
@@ -102,8 +107,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   var clickTwo = squareTwo.addEventListener('click', function() {
     if (this.innerText == '') {
-      this.innerHTML = '<span class="xo">' + whoseTurn + '</span>';
-      this.style.backgroundColor = 'salmon';
+      populate(this)
       if (whoseTurn === 'X') {
         squaresX.push(2);
         if (winCheck(squaresX) == true) {
@@ -125,8 +129,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   var clickThree = squareThree.addEventListener('click', function() {
     if (this.innerText == '') {
-      this.innerHTML = '<span class="xo">' + whoseTurn + '</span>';
-      this.style.backgroundColor = 'salmon';
+      populate(this)
       if (whoseTurn === 'X') {
         squaresX.push(3);
         if (winCheck(squaresX) == true) {
@@ -148,8 +151,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   var clickFour = squareFour.addEventListener('click', function() {
     if (this.innerText == '') {
-      this.innerHTML = '<span class="xo">' + whoseTurn + '</span>';
-      this.style.backgroundColor = 'salmon';
+      populate(this)
       if (whoseTurn === 'X') {
         squaresX.push(4);
         if (winCheck(squaresX) == true) {
@@ -171,8 +173,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   var clickFive = squareFive.addEventListener('click', function() {
     if (this.innerText == '') {
-      this.innerHTML = '<span class="xo">' + whoseTurn + '</span>';
-      this.style.backgroundColor = 'salmon';
+      populate(this)
       if (whoseTurn === 'X') {
         squaresX.push(5);
         if (winCheck(squaresX) == true) {
@@ -195,8 +196,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   var clickSix = squareSix.addEventListener('click', function() {
     if (this.innerText == '') {
-      this.innerHTML = '<span class="xo">' + whoseTurn + '</span>';
-      this.style.backgroundColor = 'salmon';
+      populate(this)
       if (whoseTurn === 'X') {
         squaresX.push(6);
         if (winCheck(squaresX) == true) {
@@ -218,8 +218,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   var clickSeven = squareSeven.addEventListener('click', function() {
     if (this.innerText == '') {
-      this.innerHTML = '<span class="xo">' + whoseTurn + '</span>';
-      this.style.backgroundColor = 'salmon';
+      populate(this)
       if (whoseTurn === 'X') {
         squaresX.push(7);
         if (winCheck(squaresX) == true) {
@@ -241,8 +240,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   var clickEight = squareEight.addEventListener('click', function() {
     if (this.innerText == '') {
-      this.innerHTML = '<span class="xo">' + whoseTurn + '</span>';
-      this.style.backgroundColor = 'salmon';
+      populate(this)
       if (whoseTurn === 'X') {
         squaresX.push(8);
         if (winCheck(squaresX) == true) {
@@ -264,8 +262,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   var clickNine = squareNine.addEventListener('click', function() {
     if (this.innerText == '') {
-      this.innerHTML = '<span class="xo">' + whoseTurn + '</span>';
-      this.style.backgroundColor = 'salmon';
+      populate(this)
       if (whoseTurn === 'X') {
         squaresX.push(9);
         if (winCheck(squaresX) == true) {
@@ -293,5 +290,5 @@ document.addEventListener('DOMContentLoaded', function() {
   //   this.innerHTML = '<span class="xo">Hi</span>';
   // })
 
-// end of 'DOMContentLoaded'
+// end of 'DOMContentLoaded':
 });
