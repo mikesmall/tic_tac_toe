@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
   var squaresX = [0, 0, 0, 0, 0, 0, 0, 0, 0]
   var squaresO = [0, 0, 0, 0, 0, 0, 0, 0, 0]
 
-  // Did you just win?
+  // Winning square combinations check:
   function winCheck(squaresArray) {
     if (squaresArray.includes(1) && squaresArray.includes(2) && squaresArray.includes(3)) {
       displayWinner();
@@ -75,214 +75,104 @@ document.addEventListener('DOMContentLoaded', function() {
     congrats.innerText = 'Nice job, ' + whoseTurn + '!';
   };
 
-  // Populate square:
+  // Populate a clicked square:
   function populate(square) {
     square.innerHTML = '<span class="xo">' + whoseTurn + '</span>';
     square.style.backgroundColor = 'salmon';
   };
 
+  // Each turn:
+  // - Adds clicked square number to player's array
+  // - Compares updated array to winning combinations
+  // - Announces victory if you won
+  // - Changes turns if you didn't win
+  function winOrPlay(squareNum) {
+    if (whoseTurn === 'X') {
+      squaresX.push(squareNum);
+      if (winCheck(squaresX) == true) {
+        displayWinner();
+      } else {
+        whoseTurn = 'O'
+      };
+    }
+    else if (whoseTurn === 'O') {
+      squaresO.push(squareNum);
+      if (winCheck(squaresO) == true) {
+        displayWinner();
+      } else {
+        whoseTurn = 'X'
+      };
+    }
+    displayPlayer.innerText = whoseTurn;
+  };
+
+
   // Event listeners for each square:
 
   var clickOne = squareOne.addEventListener('click', function() {
     if (this.innerText == '') {
-      populate(this)
-      if (whoseTurn === 'X') {
-        squaresX.push(1);
-        if (winCheck(squaresX) == true) {
-          displayWinner();
-        } else {
-          whoseTurn = 'O'
-        };
-      } else if (whoseTurn === 'O') {
-        squaresO.push(1);
-        if (winCheck(squaresO) == true) {
-          displayWinner();
-        } else {
-          whoseTurn = 'X'
-        };
-      }
-      displayPlayer.innerText = whoseTurn;
+      populate(this);
+      winOrPlay(1);
     };
   });
 
   var clickTwo = squareTwo.addEventListener('click', function() {
     if (this.innerText == '') {
       populate(this)
-      if (whoseTurn === 'X') {
-        squaresX.push(2);
-        if (winCheck(squaresX) == true) {
-          displayWinner();
-        } else {
-          whoseTurn = 'O'
-        };
-      } else if (whoseTurn === 'O') {
-        squaresO.push(2);
-        if (winCheck(squaresO) == true) {
-          displayWinner();
-        } else {
-          whoseTurn = 'X'
-        };
-      }
-      displayPlayer.innerText = whoseTurn;
+      winOrPlay(2);
     };
   });
 
   var clickThree = squareThree.addEventListener('click', function() {
     if (this.innerText == '') {
       populate(this)
-      if (whoseTurn === 'X') {
-        squaresX.push(3);
-        if (winCheck(squaresX) == true) {
-          displayWinner();
-        } else {
-          whoseTurn = 'O'
-        };
-      } else if (whoseTurn === 'O') {
-        squaresO.push(3);
-        if (winCheck(squaresO) == true) {
-          displayWinner();
-        } else {
-          whoseTurn = 'X'
-        };
-      }
-      displayPlayer.innerText = whoseTurn;
+      winOrPlay(3);
     };
   });
 
   var clickFour = squareFour.addEventListener('click', function() {
     if (this.innerText == '') {
       populate(this)
-      if (whoseTurn === 'X') {
-        squaresX.push(4);
-        if (winCheck(squaresX) == true) {
-          displayWinner();
-        } else {
-          whoseTurn = 'O'
-        };
-      } else if (whoseTurn === 'O') {
-        squaresO.push(4);
-        if (winCheck(squaresO) == true) {
-          displayWinner();
-        } else {
-          whoseTurn = 'X'
-        };
-      }
-      displayPlayer.innerText = whoseTurn;
+      winOrPlay(4);
     };
   });
 
   var clickFive = squareFive.addEventListener('click', function() {
     if (this.innerText == '') {
       populate(this)
-      if (whoseTurn === 'X') {
-        squaresX.push(5);
-        if (winCheck(squaresX) == true) {
-          displayWinner();
-        } else {
-          whoseTurn = 'O'
-        };
-      } else if (whoseTurn === 'O') {
-        squaresO.push(5);
-        if (winCheck(squaresO) == true) {
-          displayWinner();
-        } else {
-          whoseTurn = 'X'
-        };
-      }
-      displayPlayer.innerText = whoseTurn;
+      winOrPlay(5);
     };
   });
-
 
   var clickSix = squareSix.addEventListener('click', function() {
     if (this.innerText == '') {
       populate(this)
-      if (whoseTurn === 'X') {
-        squaresX.push(6);
-        if (winCheck(squaresX) == true) {
-          displayWinner();
-        } else {
-          whoseTurn = 'O'
-        };
-      } else if (whoseTurn === 'O') {
-        squaresO.push(6);
-        if (winCheck(squaresO) == true) {
-          displayWinner();
-        } else {
-          whoseTurn = 'X'
-        };
-      }
-      displayPlayer.innerText = whoseTurn;
+      winOrPlay(6);
     };
   });
 
   var clickSeven = squareSeven.addEventListener('click', function() {
     if (this.innerText == '') {
       populate(this)
-      if (whoseTurn === 'X') {
-        squaresX.push(7);
-        if (winCheck(squaresX) == true) {
-          displayWinner();
-        } else {
-          whoseTurn = 'O'
-        };
-      } else if (whoseTurn === 'O') {
-        squaresO.push(7);
-        if (winCheck(squaresO) == true) {
-          displayWinner();
-        } else {
-          whoseTurn = 'X'
-        };
-      }
-      displayPlayer.innerText = whoseTurn;
+      winOrPlay(7);
     };
   });
 
   var clickEight = squareEight.addEventListener('click', function() {
     if (this.innerText == '') {
       populate(this)
-      if (whoseTurn === 'X') {
-        squaresX.push(8);
-        if (winCheck(squaresX) == true) {
-          displayWinner();
-        } else {
-          whoseTurn = 'O'
-        };
-      } else if (whoseTurn === 'O') {
-        squaresO.push(8);
-        if (winCheck(squaresO) == true) {
-          displayWinner();
-        } else {
-          whoseTurn = 'X'
-        };
-      }
-      displayPlayer.innerText = whoseTurn;
+      winOrPlay(8);
     };
   });
 
   var clickNine = squareNine.addEventListener('click', function() {
     if (this.innerText == '') {
       populate(this)
-      if (whoseTurn === 'X') {
-        squaresX.push(9);
-        if (winCheck(squaresX) == true) {
-          displayWinner();
-        } else {
-          whoseTurn = 'O'
-        };
-      } else if (whoseTurn === 'O') {
-        squaresO.push(9);
-        if (winCheck(squaresO) == true) {
-          displayWinner();
-        } else {
-          whoseTurn = 'X'
-        };
-      }
-      displayPlayer.innerText = whoseTurn;
+      winOrPlay(9);
     };
   });
 
-  // A jQuery alternative to make squares change colour on click:
+  // jQuery alternative to make squares change colour on click:
 
   // $('.square').click(function(){
   //   console.log('jQuery click alert');
