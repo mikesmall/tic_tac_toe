@@ -103,12 +103,16 @@ document.addEventListener('DOMContentLoaded', function() {
     if (whoseTurn === 'X') {
       squaresX.push(squareNum);
       winCheck(squaresX);
-      whoseTurn = 'O'
+      if (gameOver === false) {
+        whoseTurn = 'O'
+      }
     }
     else if (whoseTurn === 'O') {
       squaresO.push(squareNum);
       winCheck(squaresO);
-      whoseTurn = 'X'
+      if (gameOver === false) {
+        whoseTurn = 'X'
+      }
     }
     displayPlayer.innerText = whoseTurn;
   };
