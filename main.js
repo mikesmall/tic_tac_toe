@@ -28,7 +28,6 @@ document.addEventListener('DOMContentLoaded', function() {
   var squareNine = document.querySelector('.nine');
 
   // 'X' goes first:
-  var gameOver = false;
   var whoseTurn = 'X';
 
   // Show whose turn it is:
@@ -68,12 +67,23 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   };
 
+  // Game ends on victory:
+  var gameOver = false;
+
   // Display the winner:
   var banner = document.querySelector( 'h1' );
   var congrats = document.querySelector( 'p' );
   function displayWinner() {
     banner.innerText = whoseTurn + ' is the winner!';
     congrats.innerText = 'Nice job, ' + whoseTurn + '!';
+    gameOver = true;
+  };
+
+  // Tie game:
+  function tieGame() {
+    banner.innerText = 'Tie game!';
+    congrats.innerText = 'Everybody wins!';
+    // gameOver();
   };
 
   // Populate a clicked square:
@@ -88,7 +98,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // - Announces victory if you won
   // - Changes turns if you didn't win
   function winOrPlay(squareNum) {
-    if (whoseTurn === 'X') {
+    if (whoseTurn === 'X' && gameOver === false) {
       squaresX.push(squareNum);
       winCheck(squaresX);
       whoseTurn = 'O'
@@ -100,8 +110,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     displayPlayer.innerText = whoseTurn;
   };
-
-
 
   // Event listeners for each square:
 
