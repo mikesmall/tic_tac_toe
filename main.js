@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded', function() {
       winCheck(squaresX);
       whoseTurn = 'O'
     }
-    else if (whoseTurn === 'O') {
+    else if (whoseTurn === 'O' && gameOver === false) {
       squaresO.push(squareNum);
       winCheck(squaresO);
       whoseTurn = 'X'
