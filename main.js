@@ -9,11 +9,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
   //  Square IDs:
   //  -------------
-  //	| 1 | 4 | 7 |
+  //  | 1 | 4 | 7 |
   //  |---|---|---|
   //  | 2 | 5 | 7 |
-  //	|---|---|---|
-  //	| 3 | 6 | 9 |
+  //  |---|---|---|
+  //  | 3 | 6 | 9 |
   //  -------------
 
   // Variables to represent each square:
@@ -33,19 +33,6 @@ document.addEventListener('DOMContentLoaded', function() {
   // Show whose turn it is:
   var displayPlayer = document.querySelector('.display_player');
   displayPlayer.innerText = whoseTurn;
-
-  // Turns out I don't need this. Keeping for stupid posterity:
-  // How to win:
-  // var winningCombos = [
-  //   [1, 2, 3],
-  //   [4, 5, 6],
-  //   [7, 8, 9],
-  //   [1, 4, 7],
-  //   [2, 5, 8],
-  //   [3, 6, 9],
-  //   [1, 5, 9],
-  //   [3, 5, 7]
-  // ];
 
   // Which squares each player has:
   var squaresX = [0, 0, 0, 0, 0, 0, 0, 0, 0]
@@ -297,24 +284,6 @@ document.addEventListener('DOMContentLoaded', function() {
       displayPlayer.innerText = whoseTurn;
     };
   });
-
-
-  //
-  // if (whoseTurn === 'X') {
-  //   this.innerHTML = '<span class="xo">X</span>'
-  // } else if (whoseTurn === 'O') {
-  //   this.innerHTML = '<span class="xo">O</span>'
-  // }
-
-  // onClick (square):
-  // -- check if square's occupied
-  // ----- if so, do nothing
-  // ----- if not, put name-of-turn in square
-
-  // ----- check if a 'winning row' has been created
-  // -------- if yes, game over
-  // -------- if no, switch player, restart 'turn' function
-
 
   // A jQuery alternative to make squares change colour on click:
 
