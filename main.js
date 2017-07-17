@@ -28,6 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
   var squareNine = document.querySelector('.nine');
 
   // 'X' goes first:
+  var gameOver = false;
   var whoseTurn = 'X';
 
   // Show whose turn it is:
@@ -89,22 +90,17 @@ document.addEventListener('DOMContentLoaded', function() {
   function winOrPlay(squareNum) {
     if (whoseTurn === 'X') {
       squaresX.push(squareNum);
-      if (winCheck(squaresX) == true) {
-        displayWinner();
-      } else {
-        whoseTurn = 'O'
-      };
+      winCheck(squaresX);
+      whoseTurn = 'O'
     }
     else if (whoseTurn === 'O') {
       squaresO.push(squareNum);
-      if (winCheck(squaresO) == true) {
-        displayWinner();
-      } else {
-        whoseTurn = 'X'
-      };
+      winCheck(squaresO);
+      whoseTurn = 'X'
     }
     displayPlayer.innerText = whoseTurn;
   };
+
 
 
   // Event listeners for each square:
