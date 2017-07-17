@@ -88,8 +88,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Populate a clicked square:
   function populate(square) {
-    square.innerHTML = '<span class="xo">' + whoseTurn + '</span>';
-    square.style.backgroundColor = 'salmon';
+    if (gameOver === false) {
+      square.innerHTML = '<span class="xo">' + whoseTurn + '</span>';
+      square.style.backgroundColor = 'salmon';
+    }
   };
 
   // Each turn:
@@ -98,12 +100,12 @@ document.addEventListener('DOMContentLoaded', function() {
   // - Announces victory if you won
   // - Changes turns if you didn't win
   function winOrPlay(squareNum) {
-    if (whoseTurn === 'X' && gameOver === false) {
+    if (whoseTurn === 'X') {
       squaresX.push(squareNum);
       winCheck(squaresX);
       whoseTurn = 'O'
     }
-    else if (whoseTurn === 'O' && gameOver === false) {
+    else if (whoseTurn === 'O') {
       squaresO.push(squareNum);
       winCheck(squaresO);
       whoseTurn = 'X'
