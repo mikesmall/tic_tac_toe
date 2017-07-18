@@ -35,8 +35,8 @@ document.addEventListener('DOMContentLoaded', function() {
   displayPlayer.innerText = whoseTurn;
 
   // Which squares each player has:
-  var squaresX = [0, 0, 0, 0, 0, 0, 0, 0, 0]
-  var squaresO = [0, 0, 0, 0, 0, 0, 0, 0, 0]
+  var squaresX = []
+  var squaresO = []
 
   // Winning square combinations check:
   function winCheck(squaresArray) {
@@ -73,17 +73,20 @@ document.addEventListener('DOMContentLoaded', function() {
   // Display the winner:
   var banner = document.querySelector( 'h1' );
   var congrats = document.querySelector( 'p' );
+
   function displayWinner() {
     banner.innerText = whoseTurn + ' is the winner!';
-    congrats.innerText = 'Nice job, ' + whoseTurn + '!';
+    congrats.innerText = 'Nice job, ' + whoseTurn + '.';
     gameOver = true;
   };
 
   // Tie game:
   function tieGame() {
-    banner.innerText = 'Tie game!';
-    congrats.innerText = 'Everybody wins!';
-    // gameOver();
+    if (squaresX.length + squaresO.length === 9) {
+      banner.innerText = 'Tie game.';
+      congrats.innerText = 'Everybody wins!';
+      gameOver();
+    };
   };
 
   // Populate a clicked square:
@@ -114,6 +117,7 @@ document.addEventListener('DOMContentLoaded', function() {
         whoseTurn = 'X'
       }
     }
+    tieGame()
     displayPlayer.innerText = whoseTurn;
   };
 
