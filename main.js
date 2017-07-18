@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', function() {
   // Button-click to reset the board:
   var newGame = document.querySelector('.new_game');
   newGame.addEventListener('click', function() {
-    console.log('The button was clicked');
     location.reload();
   });
 
@@ -11,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
   //  -------------
   //  | 1 | 4 | 7 |
   //  |---|---|---|
-  //  | 2 | 5 | 7 |
+  //  | 2 | 5 | 8 |
   //  |---|---|---|
   //  | 3 | 6 | 9 |
   //  -------------
