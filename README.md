@@ -1,6 +1,8 @@
+A @bitmakerlabs assignment.
+
 # View/play live:
 
-http://meligroveband.com/tictactoe/
+http://michaelsmall.ca/tictactoe/
 
 # Assignment directions:
 
