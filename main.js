@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Tie game:
   function tieGame() {
-    if (squaresX.length + squaresO.length === 9) {
+    if (squaresX.length + squaresO.length === 9 && gameOver === false) {
       banner.innerText = 'Tie game.';
       congrats.innerText = 'Everybody wins!';
       gameOver();
@@ -184,14 +184,6 @@ document.addEventListener('DOMContentLoaded', function() {
       winOrPlay(9);
     };
   });
-
-  // jQuery alternative to make squares change colour on click:
-
-  // $('.square').click(function(){
-  //   console.log('jQuery click alert');
-  //   $(this).css({"background-color": "salmon" });
-  //   this.innerHTML = '<span class="xo">Hi</span>';
-  // })
 
 // end of 'DOMContentLoaded':
 });
