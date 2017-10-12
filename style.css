@@ -25,6 +25,15 @@ footer {
   padding: 10px;
 }
 
+a {
+  color: steelblue;
+  text-decoration: none;
+}
+
+a:hover {
+  color: black;
+}
+
 /* Button: */
 .new_game {
   text-align:center;
@@ -32,7 +41,7 @@ footer {
   color: black;
   font-size: 24px;
   padding: 12px 28px;
-  border-radius: 8px;
+  border-radius: 12px;
   border: 1px solid gray;
   display: block;
   margin: 20px auto;
@@ -40,6 +49,11 @@ footer {
 
 .new_game:hover {
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  background-color: orange;
+}
+
+.new_game:active {
+  background-color: darkgrey;
 }
 
 .game_board {
